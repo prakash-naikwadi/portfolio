@@ -27,8 +27,8 @@ def contact(request):
         phone = request.POST['phone']
         desc = request.POST['desc']
         #print(name, email, phone, desc)
-        ins = Contact(name=name, email=email, phone=phone, desc=desc)
-        ins.save()
+        contact = Contact(name=name, email=email, phone=phone, desc=desc)
+        contact.save()
 
 
     return render(request, 'contact.html')
